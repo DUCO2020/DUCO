@@ -31,11 +31,11 @@ If you are still struggling with your own design, a few inspirations provided ab
 
 * Interactive piano: a capacitive touch response piano
 
-  ![piano](\whatwedo\piano.jpg)
+  ![piano](/whatwedo/piano.jpg)
 
 * 3D lamp: a laser cutting self-assembled lamp
 
-  ![lamp](\whatwedo\lamp.png)
+  ![lamp](/whatwedo/lamp.png)
 
   
 
