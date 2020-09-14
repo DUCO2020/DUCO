@@ -1,0 +1,18 @@
+#   ***  DUCO properties file   ***  
+#Sat Sep 12 22:57:04 EDT 2020
+DUCO.machine.width=2400
+DUCO.homepoint.y=400
+DUCO.page.width=2200
+DUCO.page.position.y=400
+DUCO.motors.inAirMaxSpeed=400
+DUCO.speedMode=1
+DUCO.vector.position.y=411.57
+DUCO.machine.height=2000
+DUCO.motors.usingMicrostep=false
+DUCO.vector.position.x=79.37
+DUCO.motors.inAirAccel=150
+DUCO.motors.maxSpeed=200
+DUCO.motors.stepsPerRev=400.0
+DUCO.motors.mmPerRev=40.0
+DUCO.page.height=1500
+DUCO.motors.accel=60
