@@ -1,10 +1,8 @@
-
-
-#DUCO
+DUCO
 
 =======
 
-![Art](/pics/Outline.HEIC)
+![Art](/pics/Outline.jpg)
 
 DUCO is an open-source, tool switchable robotic system capable of drawing multi-layer circuits on versatile vertical surface. Assembling parts are highly accessible and low cost. It's inspired by Sandy Noble's work [*Polargraph*](https://github.com/euphy/polargraph)
 
@@ -28,8 +26,8 @@ This resposity contains Graphical User Interface, Arduino operation firmware and
 
 * **DucoFirmware** C code on [Arduino](https://www.arduino.cc/), currently supporting UNO to control all motion and actuation commands. 
 * **DucoGUI** developed interface based on [Processing](https://processing.org/) framework, allowing user to interact with DUCO like selecting tools, uploading design files and start a drawing task.
-* **Duco_test** contains all design files in SVG format that our team used.
-* **Duco_models** gives access to all 3D model parts we used.
+* **DucoTest** contains all design files in SVG format that our team used.
+* **DucoModels** gives access to all 3D model parts we used.
 * **DUCO_BOM** inventory list.
 
 ## Put parts together
