@@ -224,7 +224,7 @@ boolean drawbotConnected = false;
 //public Map<String, Controller> allControls = null;
 
 /* =============================== more useful configurations  ========================= */
-int curPenMode = 0;
+int curPenMode = 0; // default as linear actuator
 //int pen1Mode = 0;
 //int pen2Mode = 0;
 //int pen3Mode = 0;

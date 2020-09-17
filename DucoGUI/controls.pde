@@ -179,6 +179,55 @@ Serial getNewSerial(String name){
 
 // for subtrate type
 public void welcomeSubSelect(int n){
+  switch(n){
+    case 0: // Acrylic
+      controlValue=1250;
+      usingAcceleration = false;
+      usingSpeedMatch = false;
+      usingMicrostep = false;
+      currentMachineMaxSpeed = 200.0;
+      inAirMaxSpeed = 500.0;
+      inAirAccel = 150.0;
+      break;
+    case 1: // Glass
+      controlValue=1250;
+      usingAcceleration = false;
+      usingSpeedMatch = false;
+      usingMicrostep = false;
+      currentMachineMaxSpeed = 100.0;
+      inAirMaxSpeed = 500.0;
+      inAirAccel = 200.0;
+      break;
+    case 2: // wall paint/ wall paper
+    case 3:
+      controlValue=1180;
+      usingAcceleration = true;
+      usingSpeedMatch = false;
+      usingMicrostep = false;
+      currentMachineMaxSpeed = 150;
+      currentMachineAccel = 30;
+      inAirMaxSpeed = 400.0;
+      inAirAccel = 150.0;
+      break;
+    case 4: // wood, photo paper
+    case 6:
+      controlValue=1230;
+      usingMicrostep = true;
+      break;
+    case 5: // Ceramic
+      controlValue=1250;
+      usingAcceleration = true;
+      usingSpeedMatch = false;
+      usingMicrostep = false;
+      currentMachineMaxSpeed = 300;
+      currentMachineAccel = 100;
+      inAirMaxSpeed = 500.0;
+      inAirAccel = 150.0;
+      break;
+    default:
+      println("no choice!");
+      break;
+  }
 }
 
 
