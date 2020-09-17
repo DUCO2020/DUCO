@@ -1,6 +1,6 @@
-#DUCO
+DUCO
 
-========
+=======
 
 DUCO is an open-source, tool switchable robotic system capable of drawing multi-layer circuits on versatile vertical surface. Assembling parts are highly accessible and low cost. It's inspired by Sandy Noble's work [*Polargraph*](https://github.com/euphy/polargraph)
 
