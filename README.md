@@ -1,4 +1,4 @@
-##DUCO
+#DUCO
 
 ========
 
@@ -15,7 +15,8 @@ While linear actuator, laser cutter are well explored in this project, DUCO stil
 * Up to 3 tools mounting platform.
 * Ink loaded pen based fabrication with good line quality
 * Highly user extensible. User can explore any tools, inks and drawing substrates
-* autonomous robotic system with pen switch, pen pressure function enabled
+* Autonomous robotic system with pen switch, pen pressure function enabled
+* Enough spare GPIOs. User can develop new functions since only a few pins are occupied
 
 ## What we offer here
 
@@ -24,20 +25,60 @@ This resposity contains Graphical User Interface, Arduino operation firmware and
 * **DucoFirmware** C code on [Arduino](https://www.arduino.cc/), currently supporting UNO to control all motion and actuation commands. 
 * **DucoGUI** developed interface based on [Processing](https://processing.org/) framework, allowing user to interact with DUCO like selecting tools, uploading design files and start a drawing task.
 * **Duco_test** contains all design files in SVG format that our team used.
+* **Duco_models** gives access to all 3D model parts we used
 
-## Some inspirations
+## Put parts together
 
-If you are still struggling with your own design, a few inspirations provided about what we do with DUCO!
+1. Before moving to run DUCO, you should first have all assembling parts ready. You can either use prototype files in Duco_models folder or design your own 3D model as long as you figure out the correct dimension for assembling.
 
-* Interactive piano: a capacitive touch response piano
+2. After you get all these accessories printed, first thing you may want to do is assembling the centre platform, we have a  that you can refer to when you do that.
 
-  ![piano](/whatwedo/piano.jpg)
+   ![figure](/pics/...jpg)
 
-* 3D lamp: a laser cutting self-assembled lamp
+3. Subsequently, use hot glue to attach the printed anchor with your steppers( for our choice we use 4-wire [NEMA 17](https://www.banggood.com/3D-Printer-High-Torque-17-Stepper-Motor-300mN-1_5A-2-phase-4-wire-p-1064247.html?p=CS120478587752016125&cur_warehouse=CN), it has a good rated current/ voltage about 5 volts which is suitable for a constant voltage driver.) Then you put a proper size of gear on the stepper driving axis for we need it to hang a belt.
 
-  ![lamp](/whatwedo/lamp.png)
+## Hardware setup
 
-  
+1. The very first thing you need to do here is working out what size of your design is and choose a proper operiting area, after which you need to fix the two anchors on the top line. Remember to spare some space both horizontally and vertically, also collecting the dimensional data of your system
+
+   ![figure](/pics/...jpg)
+
+2. Moving forward, two [GT2 timing belts](https://www.amazon.com/Printing-Zeelo-Fiberglass-Rostock-Printers/dp/B0897CJKS1/ref=sr_1_1_sspa?dchild=1&keywords=gt2+belt&qid=1600317379&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzMVNBWktLSzAxR1VIJmVuY3J5cHRlZElkPUEwNzQwMzE2Mzk0Rk41SzRHU0pWSyZlbmNyeXB0ZWRBZElkPUEwMTQ2NjkyMTRLRlIwNlRZUE42NSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=) are involved. one end of each is both connected with center platform and the other one is tied to hold a weight. They are hanged on two anchors respectively. Note, choosing correct length is important, neither too short (not covering enough moving space) nor too long (causing loosen belts when the weight hits ground)
+
+3. Now attach your Arduino Uno with motor shield. Our firmware is based on [Adafruit motor shield v2](https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/overview), a typical constant voltage driver. If you want a more stable torque output, you may consider constant current driver AKA chopper driver. However using other shield requires you to modify the firmware configuration as well.
+
+4. Uno and motor shield becomes control partner and you can stick them "in the brain" of our platform and also put metal stickers on the reflecters.
+
+   ![figure](/pics/...jpg)
+
+5. One last step you carrry out is to do wiring up
+
+   - COMs on the shield: usually the stepper is together with 4-color wire, green/black is one couple, blue/red is another. each couple should be connected to one COM on the shield. One stepper is supposed to be connected to the same side's COMs, i.e. for one stepper COM1/2 are used, COM3/4 are responsible for another one.
+   - Power port on the shield: + to 5V on DC, - to GND on DC
+   - IR: Vcc to 5V on the shield, GND to GND on the shield, SIG to analog pin 1
+   - Continuous servo:  to servo port 1 on the shield.
+   - Linear actuator: to servo port 2 on the shield.
+   - Arduino Uno: to your laptop with USB cable.
+
+## Get software ready
+
+1. Download Firmware and GUI, to begin with, you connect a cable to your Uno and burn the Firmware into it. 
+
+## Q&A
+
+1. Platform moving behavior is wrong.
+
+   aa
+
+2. When switching tool, the platform keeps rotating then stop and fails to locate a mounting slot.
+
+   bb
+
+3. Steppers are heating up.
+
+4. Linear actuator shows no response or misbehaves.
+
+
 
 
 
