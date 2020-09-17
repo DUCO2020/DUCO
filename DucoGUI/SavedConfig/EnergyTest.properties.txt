@@ -1,18 +1,18 @@
 #   ***  DUCO properties file   ***  
 #Mon Sep 07 15:36:12 EDT 2020
-polarV2.machine.width=1150
-polarV2.homepoint.y=300
-polarV2.page.width=800
-polarV2.page.position.y=300
-polarV2.motors.inAirMaxSpeed=500
-polarV2.speedMode=1
-polarV2.vector.position.y=280.75
-polarV2.machine.height=1000
-polarV2.motors.usingMicrostep=false
-polarV2.vector.position.x=367.48
-polarV2.motors.inAirAccel=150
-polarV2.motors.maxSpeed=300
-polarV2.motors.stepsPerRev=400.0
-polarV2.motors.mmPerRev=40.0
-polarV2.page.height=700
-polarV2.motors.accel=100
+DUCO.machine.width=1150
+DUCO.homepoint.y=300
+DUCO.page.width=800
+DUCO.page.position.y=300
+DUCO.motors.inAirMaxSpeed=500
+DUCO.speedMode=1
+DUCO.vector.position.y=280.75
+DUCO.machine.height=1000
+DUCO.motors.usingMicrostep=false
+DUCO.vector.position.x=367.48
+DUCO.motors.inAirAccel=150
+DUCO.motors.maxSpeed=300
+DUCO.motors.stepsPerRev=400.0
+DUCO.motors.mmPerRev=40.0
+DUCO.page.height=700
+DUCO.motors.accel=100

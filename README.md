@@ -6,7 +6,7 @@ DUCO
 
 DUCO is an open-source, tool switchable robotic system capable of drawing multi-layer circuits on versatile vertical surface. Assembling parts are highly accessible and low cost. It's inspired by Sandy Noble's work [*Polargraph*](https://github.com/euphy/polargraph)
 
-DUCO is developed for large scale circuits fabrication, but maintaining considerable local precision and resolution. It has default optimal configuration for several drawing substrates - wall paper, glass and wood, also supporting other substrate exploitation.
+DUCO is developed for large scale circuits fabrication, but maintaining considerable local precision and resolution. It has default optimal configuration for several drawing substrates - wall paper, glass, wood and etc, also supporting other substrate exploitation.
 
 While linear actuator, laser cutter are well explored in this project, DUCO still have the extensible ability to welcomes all other tools like vinyl cutter and dispenser.
 
